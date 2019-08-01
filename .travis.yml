@@ -1,4 +1,11 @@
 language: go
-go: 1.12.X
+go:
+  - 1.11.x
+  - 1.12.x
 
-script: make test
+env:
+  - GO111MODULE=on
+
+before_script: bash ./hack/check_go_fmt.sh
+
+script: make
