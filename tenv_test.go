@@ -55,6 +55,6 @@ func TestUnset(t *testing.T) {
 
 	restoredEnvVal := os.Getenv(someKey)
 	if restoredEnvVal != originalValue {
-		t.Errorf(`expected variable to be restored to "%s"; got "%s""`, originalValue, restoredEnvVal)
+		t.Errorf(`expected variable to be restored to "%s"; got "%s"`, originalValue, restoredEnvVal)
 	}
 }
